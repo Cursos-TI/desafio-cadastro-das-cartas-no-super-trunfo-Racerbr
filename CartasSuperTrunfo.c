@@ -37,7 +37,9 @@ int main() {
 
     printf("Qual é a quantidade de pontos turísticos localizados nessa cidade? \n");
     scanf("%d", &pontosturisticos);
-
+    
+    // Primeira carta:
+    
     printf("Carta 1: \n");
     
     printf("%c é a primeira letra de seu Estado \n", &estado);
@@ -76,6 +78,8 @@ int main() {
 
     printf("Qual é a quantidade de pontos turísticos localizados nessa cidade? \n");
     scanf("%d", &pontosturisticos2);
+
+    // Segunda carta:
 
     printf("Carta 2: \n");
 
