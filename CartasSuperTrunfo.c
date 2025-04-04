@@ -76,7 +76,6 @@ int main() {
     printf("Qual é a área (em km²) da cidade escolhida? \n");
     scanf("%f", &area2);
     
-    // Densidade da segunda carta
     double densidadepopulacional2 = (double) (populacao2 / area2);
 
     printf("Qual é o PIB (Produto Interno Bruto) da cidade escolhida? \n");
