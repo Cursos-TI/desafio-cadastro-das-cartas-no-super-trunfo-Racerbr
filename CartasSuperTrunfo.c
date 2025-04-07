@@ -28,6 +28,7 @@ int main() {
     scanf("%f", &area);
 
     double densidadepopulacional = (double) (populacao / area);
+    double contrariodadensidadepopulacional = (densidadepopulacional * (-1));
 
     printf("Qual é o PIB (Produto Interno Bruto) da cidade escolhida? \n");
     scanf("%f", &PIB);
@@ -36,6 +37,8 @@ int main() {
     
     printf("Qual é a quantidade de pontos turísticos localizados nessa cidade? \n");
     scanf("%d", &pontosturisticos);
+
+    float SuperPoderA = ((double) populacao + area + PIB + (double) pontosturisticos + pibpercapita + contrariodadensidadepopulacional);
     
     // Primeira carta:
     
@@ -77,7 +80,8 @@ int main() {
     scanf("%f", &area2);
     
     double densidadepopulacional2 = (double) (populacao2 / area2);
-
+    double contrariodadensidadepopulacional2 = (densidadepopulacional2 * (-1));
+    
     printf("Qual é o PIB (Produto Interno Bruto) da cidade escolhida? \n");
     scanf("%f", &PIB2);
 
@@ -85,7 +89,8 @@ int main() {
 
     printf("Qual é a quantidade de pontos turísticos localizados nessa cidade? \n");
     scanf("%d", &pontosturisticos2);
-
+    
+    float SuperPoderB = ((double) populacao2 + area2 + PIB2 + (double) pontosturisticos2 + pibpercapita2 + contrariodadensidadepopulacional2);
 
     // Segunda carta:
 
@@ -108,6 +113,17 @@ int main() {
     printf("Densidade populacional: %.2f hab/km² \n", densidadepopulacional2);
 
     printf("PIB per capita: %.2f reais \n", pibpercapita2);
+
+    printf("Comparação de Cartas: \n");
+    
+    printf("A população da carta 1 é maior que a da carta 2? %d\n", (populacao > populacao2));
+    printf("A área da carta 1 é maior que a da carta 2? %.1f\n", (area > area2));
+    printf("O PIB da carta 1 é maior que a da carta 2? %.1f\n", (PIB > PIB2));
+    printf("A quantidade de pontos turísticos da carta 1 é maior que a da carta 2? %d\n", (pontosturisticos > pontosturisticos2));
+    printf("A carta 1 tem mais densidade populacional que a carta 2, portanto, perde? %.1f\n", (densidadepopulacional > densidadepopulacional2));
+    printf("A carta 1 tem um PIB per capita maior que a carta 2? %.1f\n", (pibpercapita > pibpercapita2));
+    printf("A carta 1 tem um superpoder maior que a da carta 2? %.1f\n", (SuperPoderA > SuperPoderB));
+
 
     return 0;
 }
