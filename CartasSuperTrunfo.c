@@ -269,13 +269,351 @@ int main() {
         }
         }
     else if (escolha == 2){
-        printf("### Saindo do jogo... ###\n");
+        printf("### Continuando... ###\n");
     }
     else {
         printf("### Opção inválida! Tente novamente.\n");
     }
+    
+    int doisatributos;
+    printf("Você gostaria de comparar dois atributos numéricos diferentes para cada carta?\n");
+    printf("1. Sim\n");
+    printf("2. Não\n");
+    scanf("%d", &doisatributos);
+    
+    switch (doisatributos){
+        case 1:
+        int primeiroatributo;
+        printf("### Escolha qual será o primeiro atributo ###\n");
+        printf("1. População\n");
+        printf("2. Área\n");
+        printf("3. PIB\n");
+        printf("4. Pontos turísticos\n");
+        printf("5. Densidade populacional\n");
+        printf("6. PIB per capita\n");
+        scanf("%d", &primeiroatributo);
+        break;
+        switch (primeiroatributo){
+            case 1:
+            int segundoatributo;
+            printf("O primeiro atributo escolhido é a população\n");
+            printf("### Agora, escolha qual será o segundo atributo ###\n");
+            printf("1. População\n");
+            printf("2. Área\n");
+            printf("3. PIB\n");
+            printf("4. Pontos turísticos\n");
+            printf("5. Densidade populacional\n");
+            printf("6. PIB per capita\n");
+            scanf("%d", &segundoatributo);
+            break;
+            switch (segundoatributo){
+                case 1:
+                printf("### Você não pode escolher o mesmo atributo duas vezes! ###\n");
+                break;
+                case 2:
+                printf("Você escolheu o atributo área\n");
+                printf("População da Carta 1: %d, Área da Carta 1: %f X", populacao, area);
+                printf(" População da Carta 2: %d, Área da Carta 2: %f X\n", populacao2, area2);
+                int somadosatributos;
+                (populacao + area > populacao2 + area2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                break;
+                case 3:
+                printf("Você escolheu o atributo PIB\n");
+                printf("População da Carta 1: %d, PIB da Carta 1: %f X", populacao, PIB);
+                printf(" População da Carta 2: %d, PIB da Carta 2: %f X\n", populacao2, PIB2);
+                (populacao + PIB > populacao2 + PIB2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                break;
+                case 4:
+                printf("Você escolheu o atributo pontos turísticos\n");
+                printf("População da Carta 1: %d, pontos turísticos da Carta 1: %d X", populacao, pontosturisticos);
+                printf(" População da Carta 2: %d, pontos turísticos da Carta 2: %d X\n", populacao2, pontosturisticos2);
+                (populacao + pontosturisticos > populacao2 + pontosturisticos2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                break;
+                case 5:
+                printf("Você escolheu o atributo densidade populacional\n");
+                printf("População da Carta 1: %d, densidade populacional da Carta 1: %f X", populacao, densidadepopulacional);
+                printf(" População da Carta 2: %d, densidade populacional da Carta 2: %f X\n", populacao2, densidadepopulacional2);
+                (populacao + -densidadepopulacional > populacao2 + -densidadepopulacional2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                break;
+                case 6:
+                printf("Você escolheu o atributo PIB per capita\n");
+                printf("População da Carta 1: %d, PIB per capita da Carta 1: %f X", populacao, pibpercapita);
+                printf(" População da Carta 2: %d, PIB per capita da Carta 2: %f X\n", populacao2, pibpercapita2);
+                (populacao + pibpercapita > populacao2 + pibpercapita2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                break;
+                default:
+                printf("### Opção inválida! Tente novamente ###\n");
+            }
+        }
+            case 2:
+            switch (primeiroatributo){
+                case 1:
+                int segundoatributo;
+                printf("O primeiro atributo escolhido é a área\n");
+                printf("### Agora, escolha qual será o segundo atributo ###\n");
+                printf("1. População\n");
+                printf("2. Área\n");
+                printf("3. PIB\n");
+                printf("4. Pontos turísticos\n");
+                printf("5. Densidade populacional\n");
+                printf("6. PIB per capita\n");
+                scanf("%d", &segundoatributo);
+                break;
+                switch (segundoatributo){
+                    case 1:
+                    printf("Você escolheu o atributo população\n");
+                    printf("Área da Carta 1: %f, População da Carta 1: %d X", area, populacao);
+                    printf(" Área da Carta 2: %f, População da Carta 2: %d X\n", area2, populacao2);
+                    int somadosatributos;
+                    (area + populacao > area2 + populacao2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                    break;
+                    case 2:
+                    printf("### Você não pode escolher o mesmo atributo duas vezes! ###\n");
+                    break;
+                    case 3:
+                    printf("Você escolheu o atributo PIB\n");
+                    printf("Área da Carta 1: %f, PIB da Carta 1: %f X", area, PIB);
+                    printf(" Área da Carta 2: %f, PIB da Carta 2: %f X\n", area2, PIB2);
+                    (area + PIB > area2 + PIB2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                    break;
+                    case 4:
+                    printf("Você escolheu o atributo pontos turísticos\n");
+                    printf("Área da Carta 1: %f, pontos turísticos da Carta 1: %d X", area, pontosturisticos);
+                    printf(" Área da Carta 2: %f, pontos turísticos da Carta 2: %d X\n", area2, pontosturisticos2);
+                    (area + pontosturisticos > area2 + pontosturisticos2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                    break;
+                    case 5:
+                    printf("Você escolheu o atributo densidade populacional\n");
+                    printf("Área da Carta 1: %f, densidade populacional da Carta 1: %f X", area, densidadepopulacional);
+                    printf(" Área da Carta 2: %f, densidade populacional da Carta 2: %f X\n", area2, densidadepopulacional2);
+                    (area + -densidadepopulacional > area2 + -densidadepopulacional2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                    break;
+                    case 6:
+                    printf("Você escolheu o atributo PIB per capita\n");
+                    printf("Área da Carta 1: %f, PIB per capita da Carta 1: %f X", area, pibpercapita);
+                    printf(" Área da Carta 2: %f, PIB per capita da Carta 2: %f X\n", area2, pibpercapita2);
+                    (area + pibpercapita > area2 + pibpercapita2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                    break;
+                    default:
+                    printf("### Opção inválida! Tente novamente ###\n");
+                }
+                }
+                case 3:
+                switch (primeiroatributo){
+                    case 1:
+                    int segundoatributo;
+                    printf("O primeiro atributo escolhido é o PIB\n");
+                    printf("### Agora, escolha qual será o segundo atributo ###\n");
+                    printf("1. População\n");
+                    printf("2. Área\n");
+                    printf("3. PIB\n");
+                    printf("4. Pontos turísticos\n");
+                    printf("5. Densidade populacional\n");
+                    printf("6. PIB per capita\n");
+                    scanf("%d", &segundoatributo);
+                    break;
+                    switch (segundoatributo){
+                        case 1:
+                        printf("Você escolheu o atributo população\n");
+                        printf("PIB da Carta 1: %f, População da Carta 1: %d X", PIB, populacao);
+                        printf(" PIB da Carta 2: %f, População da Carta 2: %d X\n", PIB2, populacao2);
+                        int somadosatributos;
+                       (PIB + populacao > PIB2 + populacao2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 2:
+                        printf("Você escolheu o atributo área\n");
+                        printf("PIB da Carta 1: %f, Área da Carta 1: %f X", PIB, area);
+                        printf(" PIB da Carta 2: %f, Área da Carta 2: %f X\n", PIB2, area2);
+                        (PIB + area > PIB2 + area2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 3:
+                        printf("### Você não pode escolher o mesmo atributo duas vezes! ###\n");
+                        break;
+                        case 4:
+                        printf("Você escolheu o atributo pontos turísticos\n");
+                        printf("PIB da Carta 1: %f, pontos turísticos da Carta 1: %d X", PIB, pontosturisticos);
+                        printf(" PIB da Carta 2: %f, pontos turísticos da Carta 2: %d X\n", PIB2, pontosturisticos2);
+                        (PIB + pontosturisticos > PIB2 + pontosturisticos2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 5:
+                        printf("Você escolheu o atributo densidade populacional\n");
+                        printf("PIB da Carta 1: %f, densidade populacional da Carta 1: %f X", PIB, densidadepopulacional);
+                        printf(" PIB da Carta 2: %f, densidade populacional da Carta 2: %f X\n", PIB2, densidadepopulacional2);
+                        (PIB + -densidadepopulacional > PIB2 + -densidadepopulacional2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 6:
+                        printf("Você escolheu o atributo PIB per capita\n");
+                        printf("PIB da Carta 1: %f, PIB per capita da Carta 1: %f X", PIB, pibpercapita);
+                        printf(" PIB da Carta 2: %f, PIB per capita da Carta 2: %f X\n", PIB2, pibpercapita2);
+                        (PIB + pibpercapita > PIB2 + pibpercapita2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        default:
+                        printf("### Opção inválida! Tente novamente ###\n");
+                    }
+                }
+                case 4:
+                switch (primeiroatributo){
+                    case 1:
+                    int segundoatributo;
+                    printf("O primeiro atributo escolhido é a quantidade de pontos turísticos\n");
+                    printf("### Agora, escolha qual será o segundo atributo ###\n");
+                    printf("1. População\n");
+                    printf("2. Área\n");
+                    printf("3. PIB\n");
+                    printf("4. Pontos turísticos\n");
+                    printf("5. Densidade populacional\n");
+                    printf("6. PIB per capita\n");
+                    scanf("%d", &segundoatributo);
+                    break;
+                    switch (segundoatributo){
+                        case 1:
+                        printf("Você escolheu o atributo população\n");
+                        printf("Pontos turísticos da Carta 1: %d, População da Carta 1: %d X", pontosturisticos, populacao);
+                        printf(" Pontos turísticos da Carta 2: %d, População da Carta 2: %d X\n", pontosturisticos2, populacao2);
+                        int somadosatributos;
+                       (pontosturisticos + populacao > pontosturisticos2 + populacao2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 2:
+                        printf("Você escolheu o atributo área\n");
+                        printf("Pontos turísticos da Carta 1: %d, Área da Carta 1: %f X", pontosturisticos, area);
+                        printf(" Pontos turísticos da Carta 2: %d, Área da Carta 2: %f X\n", pontosturisticos2, area2);
+                        (pontosturisticos + area > pontosturisticos2 + area2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 3:
+                        printf("Você escolheu o atributo PIB\n");
+                        printf("Pontos turísticos da Carta 1: %d, PIB da Carta 1: %f X", pontosturisticos, PIB);
+                        printf(" População da Carta 2: %d, PIB da Carta 2: %f X\n", pontosturisticos2, PIB2);
+                        (pontosturisticos + PIB > pontosturisticos2 + PIB2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 4:
+                        printf("### Você não pode escolher o mesmo atributo duas vezes! ###\n");
+                        break;
+                        case 5:
+                        printf("Você escolheu o atributo densidade populacional\n");
+                        printf("Pontos turísticos da Carta 1: %d, densidade populacional da Carta 1: %f X", pontosturisticos, densidadepopulacional);
+                        printf(" Pontos turísticos da Carta 2: %d, densidade populacional da Carta 2: %f X\n", pontosturisticos2, densidadepopulacional2);
+                        (pontosturisticos + -densidadepopulacional > pontosturisticos2 + -densidadepopulacional2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 6:
+                        printf("Você escolheu o atributo PIB per capita\n");
+                        printf("Pontos turísticos da Carta 1: %d, PIB per capita da Carta 1: %f X", pontosturisticos, pibpercapita);
+                        printf(" Pontos turísticos da Carta 2: %d, PIB per capita da Carta 2: %f X\n", pontosturisticos2, pibpercapita2);
+                        (pontosturisticos + pibpercapita > pontosturisticos2 + pibpercapita2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        default:
+                        printf("### Opção inválida! Tente novamente ###\n");
+                    }
+                }
+                case 5:
+                switch (primeiroatributo){
+                    case 1:
+                    int segundoatributo;
+                    printf("O primeiro atributo escolhido é a densidade populacional\n");
+                    printf("### Agora, escolha qual será o segundo atributo ###\n");
+                    printf("1. População\n");
+                    printf("2. Área\n");
+                    printf("3. PIB\n");
+                    printf("4. Pontos turísticos\n");
+                    printf("5. Densidade populacional\n");
+                    printf("6. PIB per capita\n");
+                    scanf("%d", &segundoatributo);
+                    break;
+                    switch (segundoatributo){
+                        case 1:
+                        printf("Você escolheu o atributo população\n");
+                        printf("Densidade populacional da Carta 1: %f, População da Carta 1: %d X", densidadepopulacional, populacao);
+                        printf(" Densidade populacional da Carta 2: %f, População da Carta 2: %d X\n", densidadepopulacional2, populacao2);
+                        int somadosatributos;
+                        (-densidadepopulacional + populacao > -densidadepopulacional2 + populacao2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 2:
+                        printf("Você escolheu o atributo área\n");
+                        printf("Densidade populacional da Carta 1: %f, Área da Carta 1: %f X", densidadepopulacional, area);
+                        printf(" Densidade populacional da Carta 2: %f, Área da Carta 2: %f X\n", densidadepopulacional2, area2);
+                        (-densidadepopulacional + area > -densidadepopulacional2 + area2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 3:
+                        printf("Você escolheu o atributo PIB\n");
+                        printf("Densidade populacional da Carta 1: %f, PIB da Carta 1: %f X", densidadepopulacional, PIB);
+                        printf(" Densidade populacional da Carta 2: %f, PIB da Carta 2: %f X\n", densidadepopulacional2, PIB2);
+                        (-densidadepopulacional + PIB > -densidadepopulacional2 + PIB2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 4:
+                        printf("Você escolheu o atributo pontos turísticos\n");
+                        printf("Densidade populacional da Carta 1: %f, pontos turísticos da Carta 1: %d X", densidadepopulacional, pontosturisticos);
+                        printf(" Densidade populacional da Carta 2: %f, pontos turísticos da Carta 2: %d X\n", densidadepopulacional2, pontosturisticos2);
+                        (-densidadepopulacional + pontosturisticos > -densidadepopulacional2 + pontosturisticos2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 5:
+                        printf("### Você não pode escolher o mesmo atributo duas vezes! ###\n");
+                        break;
+                        case 6:
+                        printf("Você escolheu o atributo PIB per capita\n");
+                        printf("Densidade populacional da Carta 1: %f, PIB per capita da Carta 1: %f X", densidadepopulacional, pibpercapita);
+                        printf(" Densidade populacional da Carta 2: %f, PIB per capita da Carta 2: %f X\n", densidadepopulacional2, pibpercapita2);
+                        (-densidadepopulacional + pibpercapita > -densidadepopulacional2 + pibpercapita2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        default:
+                        printf("### Opção inválida! Tente novamente ###\n");
+                    }
+                    }
+                case 6:
+                switch (primeiroatributo){
+                    case 1:
+                    int segundoatributo;
+                    printf("O primeiro atributo escolhido é o PIB per capita\n");
+                    printf("### Agora, escolha qual será o segundo atributo ###\n");
+                    printf("1. População\n");
+                    printf("2. Área\n");
+                    printf("3. PIB\n");
+                    printf("4. Pontos turísticos\n");
+                    printf("5. Densidade populacional\n");
+                    printf("6. PIB per capita\n");
+                    scanf("%d", &segundoatributo);
+                    break;
+                    switch (segundoatributo){
+                        case 1:
+                        printf("Você escolheu o atributo população\n");
+                        printf("PIB per capita da Carta 1: %f, População da Carta 1: %d X", pibpercapita, populacao);
+                        printf(" PIB per capita da Carta 2: %f, População da Carta 2: %d X\n", pibpercapita2, populacao2);
+                        int somadosatributos;
+                        (pibpercapita + populacao > pibpercapita2 + populacao2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 2:
+                        printf("Você escolheu o atributo área\n");
+                        printf("PIB per capita da Carta 1: %f, Área da Carta 1: %f X", pibpercapita, area);
+                        printf(" PIB per capita da Carta 2: %f, Área da Carta 2: %f X\n", pibpercapita2, area2);
+                        (pibpercapita + area > pibpercapita2 + area2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 3:
+                        printf("Você escolheu o atributo PIB\n");
+                        printf("PIB per capita da Carta 1: %f, PIB da Carta 1: %f X", pibpercapita, PIB);
+                        printf(" PIB per capita da Carta 2: %f, PIB da Carta 2: %f X\n", pibpercapita2, PIB2);
+                        (pibpercapita + PIB > pibpercapita2 + PIB2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 4:
+                        printf("Você escolheu o atributo pontos turísticos\n");
+                        printf("PIB per capita da Carta 1: %f, pontos turísticos da Carta 1: %d X", pibpercapita, pontosturisticos);
+                        printf(" PIB per capita da Carta 2: %f, pontos turísticos da Carta 2: %d X\n", pibpercapita2, pontosturisticos2);
+                        (pibpercapita + pontosturisticos > pibpercapita2 + pontosturisticos2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 5:
+                        printf("Você escolheu o atributo densidade populacional\n");
+                        printf("PIB per capita da Carta 1: %f, densidade populacional da Carta 1: %f X", pibpercapita, densidadepopulacional);
+                        printf(" PIB per capita da Carta 2: %f, densidade populacional da Carta 2: %f X\n", pibpercapita2, densidadepopulacional2);
+                        (pibpercapita + -densidadepopulacional > pibpercapita2 + -densidadepopulacional2) ? printf("A soma dos dois atributos da Carta 1 venceu!\n") : printf("A soma dos dois atributos da Carta 2 venceu!\n");
+                        break;
+                        case 6:
+                        printf("### Você não pode escolher o mesmo atributo duas vezes! ###\n");
+                        break;
+                        default:
+                        printf("### Opção inválida! Tente novamente ###\n");
+                    }
+                    }
+                }
+
+    
+
 
     return 0;
-
 }
-
